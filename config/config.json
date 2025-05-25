@@ -15,9 +15,11 @@
 	},
 	"production": {
 		"username": "root",
-		"password": null,
-		"database": "database_production",
-		"host": "127.0.0.1",
+		"password": "AcZqdXypDCKTBCpVI1b6OidMlbIWXs6X",
+		"database": "4268/root",
+		"host": "byt583.stackhero-network.com",
 		"dialect": "mysql"
 	}
 }
+
+//mysql://root:AcZqdXypDCKTBCpVI1b6OidMlbIWXs6X@byt583.stackhero-network.com:4268/root?useSSL=true&requireSSL=true
