@@ -16,6 +16,27 @@ app.use("/vennisstones", vennisStonesRoutes);
 const userContactRoutes = require("./routes/UserContact");
 app.use("/usercontact", userContactRoutes);
 
+// Database connection
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+	dialect: "mysql",
+	dialectOptions: {
+		ssl: {
+			require: true,
+			rejectUnauthorized: false, // adjust based on your database provider
+		},
+	},
+});
+
+// Test connection
+sequelize
+	.authenticate()
+	.then(() => {
+		console.log("Database connected successfully.");
+	})
+	.catch((err) => {
+		console.error("Unable to connect to the database:", err);
+	});
+
 // Basic error handler
 app.use((err, req, res, next) => {
 	console.error(err.stack);
