@@ -9,10 +9,6 @@ const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(cors());
-
-// Serve static files (optional, e.g., for React build)
-// app.use(express.static("public"));
-
 // Routes
 const vennisStonesRoutes = require("./routes/VennisStones");
 app.use("/vennisstones", vennisStonesRoutes);
@@ -27,7 +23,7 @@ app.use((err, req, res, next) => {
 });
 
 db.sequelize.sync().then(() => {
-	app.listen(PORT, () => {
+	app.listen(process.env.PORT || 3001, () => {
 		console.log(`Server is running on port ${PORT}`);
 	});
 });
