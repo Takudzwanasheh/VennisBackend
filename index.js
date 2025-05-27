@@ -1,10 +1,9 @@
+require("dotenv").config(); // Ensure this is at the top
+
 const express = require("express");
 const app = express();
 const db = require("./models");
 const cors = require("cors");
-require("dotenv").config();
-
-// const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(cors());
@@ -24,21 +23,13 @@ app.use((err, req, res, next) => {
 		.json({ error: err.message || "Something went wrong!" });
 });
 
-// Sync database and start server
-// db.sequelize
-// 	.sync()
-// 	.then(() => {
-// 		app.listen(PORT, () => {
-// 			console.log(`Server is running on port ${PORT}`);
-// 		});
-// 	})
-// 	.catch((err) => {
-// 		console.error("Database connection error:", err);
-// 		process.exit(1); // Exit the application if the database connection fails
-// 	});
-
-db.sequelize.sync().then(() => {
-	app.listen(process.env.PORT || 3001, () => {
-		console.log(`Server is running on port ${process.env.PORT || 3001}`);
+db.sequelize
+	.sync()
+	.then(() => {
+		app.listen(process.env.PORT || 3001, () => {
+			console.log(`Server is running on port ${process.env.PORT || 3001}`);
+		});
+	})
+	.catch((err) => {
+		console.error("Failed to sync database:", err);
 	});
-});
