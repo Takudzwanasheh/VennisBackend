@@ -5,16 +5,11 @@ const path = require("path");
 const Sequelize = require("sequelize");
 const process = require("process");
 const basename = path.basename(__filename);
-const mysql = require("mysql");
+const mysql = require("mysql2");
 const env = process.env.NODE_ENV || "development";
 const config = require(__dirname + "/../config/config.json")[env];
 
-const db = mysql.createConnection({
-	host: "l9dwvv6j64hlhpul.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-	user: "pzkk02hqqdztq6nw",
-	password: "krzl5fpkemialo66",
-	database: "fw5khdlwe6h9tpdf",
-});
+const db = {};
 //mysql://pzkk02hqqdztq6nw:krzl5fpkemialo66@l9dwvv6j64hlhpul.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/fw5khdlwe6h9tpdf
 
 let sequelize;
