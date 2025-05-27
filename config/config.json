@@ -15,9 +15,9 @@
 	},
 	"production": {
 		"username": "root",
-		"password": "RpdL3rZp6JjdwLMlYc32LcT3eEu2EqjH",
+		"password": "geeO8sO1T4EfHMTsXe3Xc3WQyQa4dfNF",
 		"database": "root",
-		"host": "45bb30.stackhero-network.com",
+		"host": "sveii8.stackhero-network.com",
 		"dialect": "mysql"
 	}
 }
