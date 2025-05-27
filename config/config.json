@@ -14,10 +14,10 @@
 		"dialect": "mysql"
 	},
 	"production": {
-		"username": "root",
-		"password": "geeO8sO1T4EfHMTsXe3Xc3WQyQa4dfNF",
-		"database": "root",
-		"host": "sveii8.stackhero-network.com",
+		"username": "pzkk02hqqdztq6nw",
+		"password": "krzl5fpkemialo66",
+		"database": "fw5khdlwe6h9tpdf",
+		"host": "l9dwvv6j64hlhpul.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
 		"dialect": "mysql"
 	}
 }
